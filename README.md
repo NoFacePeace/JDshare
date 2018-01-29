@@ -1,6 +1,7 @@
 # 搭建京东首页(简版)
 
 > 前端工程师的基本技能 - 写页面
+[ppt](http://blog.orzcn.cn/JDshare/)
 
 ## HTML 和 CSS
 

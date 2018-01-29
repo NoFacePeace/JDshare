@@ -1,0 +1,268 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=-0, maximum-scale=-0, user-scalable=no">
+
+    <title>搭建京东首页</title>
+
+    <link rel="stylesheet" href="./reveal.js/css/reveal.css">
+    <link rel="stylesheet" href="./reveal.js/css/theme/black.css">
+
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="./reveal.js/lib/css/zenburn.css">
+
+    <!-- Printing and PDF exports -->
+    <script>
+        var link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = window.location.search.match(/print-pdf/gi) ? './reveal.js/css/print/pdf.css' : './reveal.js/css/print/paper.css';
+        document.getElementsByTagName('head')[0].appendChild(link);
+    </script>
+</head>
+<body>
+<div class="reveal">
+    <div class="slides">
+        <section data-markdown data-separator="^\n---\n$" data-separator-vertical="^\n--\n$">
+    <textarea data-template>
+        # 搭建京东首页(简版)
+
+        ###### 前端工程师的基本技能 - 写页面<!-- .element: style="text-align: right;" -->
+
+        ---
+        
+        ## HTML 和 CSS
+        
+        - 页面的结构设计
+        - 页面的表现设计
+
+        ---
+
+        ## 步骤
+        
+        - 划分版块
+        - 搭建骨架
+        - 样式设计
+
+        ---
+
+        ## 实战环节
+        
+        进入京东首页
+        
+        [点击这里](https://www.jd.com)
+
+        ---
+
+        ### 划分版块
+        
+        - header
+        
+            ![](images/header.png)
+
+        --
+
+        - banner
+        
+            ![](images/banner.png)
+
+        --
+
+        - content
+        
+            ![](images/content.png)
+
+        --
+
+        - footer
+        
+            ![](images/footer.png)
+
+        --
+
+        - 代码
+        
+        ```html
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <title>JD</title>
+        </head>
+        <!-- 第一层结构 -->
+        <body>
+            <div id="header"></div>
+            <div id="banner"></div>
+            <div id="content"></div>
+            <div id="footer"></div>
+        </body>
+        ```
+
+        --
+
+        [效果图](demo/demo6.html)
+
+        ---
+
+        ### 搭建骨架
+        
+        #### header
+        
+        ![](images/header.png)
+        
+        ```html
+        <!-- 第二层结构 -->
+        <div id="header">
+            <div id="login"></div>
+            <div id="logo"></div>
+            <div id="search"></div>
+            <div id="cart"></div>
+            <div id="nav"></div>
+        </div>
+        ```
+
+        --
+
+        #### login
+        
+        ![](images/login.png)
+        
+        ```html
+        <!-- 第三层结构 -->
+        <div id="login">
+            <ul id="location">
+                <li>北京</li>
+            </ul>
+            <ul id="message">
+                <li>我的订单</li><li>我的京东</li>
+                <li>京东会员</li><li>企业采购</li>
+                <li>客户服务</li><li>网站导航</li>
+                <li>手机京东</li>
+            </ul>
+        </div>
+        ```
+
+        --
+
+        ### 样式设计
+        
+        [无样式页面](demo/demo1.html)
+
+        --
+
+        #### 重置标签
+        
+        ```CSS
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+        ul {
+            list-style: none;
+        }
+        ```
+        
+        [重置页面](demo/demo2.html)
+
+        --
+
+        #### 块状元素浮动
+        
+        ```CSS
+        #location {
+            float: left;
+        }
+        #message {
+            float: right;
+        }
+        #message li{
+            float: left;
+        }
+        ```
+        
+        [浮动](demo/demo3.html)
+
+        --
+
+        #### 颜色
+        
+        ```CSS
+        #login {
+            height: 40px;
+            background-color: #e3e4e5;
+            color: #999;
+        }
+        ```
+        [颜色](demo/demo4.html)
+
+        --
+
+        #### 边距
+        
+        ```CSS
+        #location {
+            margin-left: 20%;
+        }
+        #message {
+            margin-right: 4%;
+        }
+        ul li {
+            margin-right: 10px;
+        }
+        ```
+        
+        [边距](demo/demo5.html)
+
+        --
+
+        #### demo
+        
+        [京东首页](demo/demo.html)
+
+        ---
+
+        ## 总结 : 树 + 嵌套
+        
+        ![](images/tree.png)
+
+        ---
+
+        ## 页面的价值
+        
+        - 提高页面对搜索引擎的亲和度
+        - 代码高度压缩
+        - 提升页面加载速度
+        - 提升网页的整体价值
+        - 优化页面至极致
+
+        ---
+        
+        Thank you!
+    </textarea>
+        </section>
+    </div>
+</div>
+
+<script src="./reveal.js/lib/js/head.min.js"></script>
+<script src="./reveal.js/js/reveal.js"></script>
+
+<script>
+    // More info about config & dependencies:
+    // - https://github.com/hakimel/reveal.js#configuration
+    // - https://github.com/hakimel/reveal.js#dependencies
+    Reveal.initialize({
+        dependencies: [
+            {src: './reveal.js/plugin/markdown/marked.js'},
+            {src: './reveal.js/plugin/markdown/markdown.js'},
+            {src: './reveal.js/plugin/zoom-js/zoom.js', async: true},
+            {src: './reveal.js/plugin/notes/notes.js', async: true},
+            {
+                src: './reveal.js/plugin/highlight/highlight.js', async: true, callback: function () {
+                    hljs.initHighlightingOnLoad();
+                }
+            }
+        ]
+    });
+</script>
+</body>
+</html>

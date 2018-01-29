@@ -1,0 +1,130 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+body {
+    background-color: #f0f3ef;
+}
+#header {
+    margin-left: 11.5%;
+}
+#loginbar {
+    height: 30px;
+    background-color: #e3e4e5;
+    line-height: 30px;
+    font-size: 12px;
+}
+.red {
+    color: red;
+}
+ul {
+    list-style: none;
+}
+#location {
+    float: left;
+    margin-left: 20%;
+}
+#loginMessage {
+    float: right;
+    margin-right: 4%;
+}
+#loginbar ul li {
+    float: left;
+    margin-right: 10px;
+    color: #999;
+}
+.ib {
+    display: inline-block;
+}
+.fl {
+    float: left;
+}
+#logo {
+    margin-left: 4%;
+}
+#searchNav {
+    height: 173px;
+    margin-left: 40px;
+}
+#search {
+    margin-left: 80px;
+    margin-top: 40px;
+    height: 36px;
+}
+#searchButton {
+    margin-right: 30px;
+}
+#nav {
+    margin-top: 60px;
+}
+#nav ul li {
+    float: left;
+    margin-right: 20px;
+    font: bolder;
+}
+#banner {
+    height: 480px;
+    margin-left: 11.5%;
+}
+.clear {
+    clear: both;
+}
+#category {
+    width: 190px;
+    height: 480px;
+    background-color: white;
+    margin-left: 4%;
+    margin-right: 10px;
+}
+#category ul li {
+    color: #999;
+    margin-left: 20px;
+    margin-bottom: 6.5px;
+    font-size: auto;
+}
+#advertistingBig {
+    width: 590px;
+    height: 470px;
+    margin-right: 10px;
+}
+#advertistingSmall img {
+    margin-top: 4px;
+}
+#board img {
+    width: 170px;
+    height: 470px;
+}
+#content {
+    margin-left: 15%;
+}
+#footer #feature ul li,h4,p {
+    display: inline-block;
+    font-size: 20px;
+}
+#footer {
+    margin-left: 20%;
+}
+#footer #feature ul li {
+    margin-right: 80px;
+}
+#feature {
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+#help div {
+    float: left;
+    margin-right: 105px;
+}
+#help ul {
+    font-size: 12px;
+}
+#help p {
+    font-size: 12px;
+    color: #999;
+}
+#help li {
+    color: #999;
+}
+#under img {
+    width: 100%;
+}
